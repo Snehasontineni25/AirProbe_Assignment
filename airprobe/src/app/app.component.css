@@ -1,0 +1,71 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
+/* sneha mat card */
+.fa-2x {
+  font-size: 1em;
+  padding-right:5px;
+  }
+  .menuanchor
+  {
+    font-size:1em;
+   /* color:#b8c7ce; */
+  }
+  .menuanchor:hover
+  {
+    color:#fff;
+  }
+  .sidenav
+  {
+    box-shadow: 0 0.5rem 1rem 0 rgba(44,51,73,.1);
+    border:none;
+    background-color:#222d32;
+  }
+  .topnav
+  {
+    background:#3c8dbc;
+    box-shadow:0 0.5rem 1rem 0 rgba(44,51,73,.1);
+  }
+  .just
+  {
+    cursor: pointer;
+  }
+  .parentele
+  {
+    padding:5px;
+  }
+  .active-link div i
+  {
+    /* color:#36f; */
+    /* color:#fff; */
+    color:#3c8dbc;
+  }
+  .logout
+  {
+    font-size:1vw;
+    margin-left:8px;
+    cursor: pointer;
+  }
+  .curusr
+  {
+    font-size:0.9vw;
+    cursor: default;
+    font-weight:400;
+  }
+  .fill-remaining-space {
+    flex: 1 1 auto;
+  }
+  .lnktit
+  {
+    font-size:1vw;
+  }
+/* end of mat card */
+.formele
+{
+  margin-left: 30px;
+    font-size: 1vw;
+}
+.pagetitle
+{
+  margin-left:6vw;
+  font-size:1.2vw;
+}

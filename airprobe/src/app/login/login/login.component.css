@@ -1,0 +1,23 @@
+.curs
+{
+   cursor: pointer;
+}
+.padtop
+{
+   padding-top:5%;
+}
+.loginbtn
+{
+   width:100%;
+}
+.wdt
+{
+   min-width:20%;
+   padding-top:0px;
+}
+.logo
+{
+   min-height: 100px;
+    height: 4vh;
+    margin-bottom:20px;
+}
