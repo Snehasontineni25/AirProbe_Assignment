@@ -1,0 +1,55 @@
+.profile
+{
+    box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 3px 14px 2px rgba(0,0,0,.12);
+    background-color:white;
+    width:30%;
+    margin:auto;
+}
+.defimg
+{
+    margin:auto;
+    height:30vh;
+    margin-bottom:30px;
+}
+.imgpar
+{
+   margin-left:0px;
+   margin-right:0px;
+   padding-top:20px;
+}
+.rowcls
+{
+    margin-left:0px;
+    margin-right:0px;
+    width:100%;
+}
+.detrow
+{
+    padding:8px 0px;
+    border-top:1px solid grey;
+}
+.editbtn
+{
+    cursor: pointer;
+    color:blue;
+    padding:0px 5px;
+}
+.savebtn
+{
+    background-color:rgb(60, 141, 188);
+    font-weight:bold;
+}
+.btnspar
+{
+   display: block;
+   float: right;
+   padding:20px 10px 10px 10px;
+}
+.savebtn, .cancelbtn
+{
+    float: right;
+}
+.cancelbtn
+{
+    margin-right:15px;
+}
