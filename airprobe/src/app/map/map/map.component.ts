@@ -177,8 +177,8 @@ export class MapComponent implements OnInit {
     }
   ];
   //end of map
-  mapdummyData:any=[{location:[12.9716, 77.5946], image:'assets/bangalore.jpeg', place:'Bangalore', description:'Bangalore Weather'},
-    {location:[16.2060, 80.2133], image:'assets/airprobe.jpg', place:'Lingaraopalem', description:'Home Town'},];
+  mapdummyData:any=[{location:[12.9716, 77.5946], image:'assets/bangalore.jpeg', place:'Bangalore', description:'Amazing Weather.Professional opportunities are plentiful (if you want to switch jobs).Plenty of places to explore outside the city on a weekend. Bangalore has pretty good cosmopolitian culture'},
+    {location:[16.2060, 80.2133], image:'assets/lingaraopalem.jpeg', place:'Lingaraopalem', description:'Lingaraopalem is a village, locted at Edlapadu Madal Guntur Dist, Andhra Pradesh.Its my home town.I born and brought from this place.'},];
   INDIA = { lat: 20.3120868, lng: 74.7320638 };
   map: any;
   latestlocationmap:any;
@@ -307,7 +307,8 @@ directionsService = new google.maps.DirectionsService();
          let description = seldata.description;
         let img = seldata.image;
         let placediv="<h3 class='row brname'>"+heading+"</h3>";
-        let addressdiv = "<div class='row brname'>"+"<div class = 'col-md-4 col-xs-4 col-lg-4 col-sm-4 pad0'> <img class='img-responsive cosp' src="+img+"></img>"+"</div>"+"<div class='col-md-8 col-xs-8 col-lg-8 col-sm-8 contsp'>"+description+"</div>"+"</div>";
+        //let addressdiv = "<div class='row brname'>"+"<div class = 'col-md-4 col-xs-4 col-lg-4 col-sm-4 pad0'> <img class='cosp' src="+img+"></img>"+"</div>"+"<div class='col-md-8 col-xs-8 col-lg-8 col-sm-8 contsp'>"+description+"</div>"+"</div>";
+        let addressdiv = "<div class='row brname'>"+"<img class='cosp' src="+img+"></img>"+"<div class='contsp'>"+description+"</div>"+"</div>";
         cont ="<div class='row bncont'>"+addressdiv+"</div>";
         infowindow.setContent(cont);
         }

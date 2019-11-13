@@ -28,26 +28,28 @@ public get currentUserValue(): any {
   login(name:string, loggedinuser:string)
   {
     console.log('login',name, loggedinuser);
-    let loggeduser = {"uname":name, "email":loggedinuser, "count":1};
+    let loggeduser = {"uname":name, "email":loggedinuser, "logincount":1, "position":1};
     localStorage.setItem('currentUser', JSON.stringify(loggedinuser));
     let list:any = localStorage.getItem('loggedinusers');
     if(list)
     {
        list = JSON.parse(list);
        let getemailindex = list.findIndex(function(item){ return item.email== loggedinuser});
+       list[getemailindex].count  =  list[getemailindex].count+1;
        if(getemailindex && getemailindex >= 0)
        {
-          list[getemailindex].count  =  list[getemailindex].count+1;
           localStorage.setItem('loggedinusers', JSON.stringify(list));
        }
        else
        {
+         loggeduser.position = loggeduser.position+1;
          list.push(loggeduser);
          localStorage.setItem('loggedinusers', JSON.stringify(list));
        }
     } //if
     else
     {
+      loggeduser.position = 1;
       localStorage.setItem('loggedinusers', JSON.stringify([loggeduser]));
     }
    // this.currentUserSubject.next(loggedinuser);

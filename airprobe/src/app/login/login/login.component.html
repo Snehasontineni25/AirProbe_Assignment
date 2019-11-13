@@ -3,7 +3,7 @@
     <mat-card-content fxLayout="column">
            <img src='assets/airprobe.jpg' class='logo'>
             <mat-form-field class="example-full-width">
-                    <input matInput placeholder="Full Name" [formControl]="nameFormControl"
+                    <input matInput placeholder="Full Name" #nameInput [formControl]="nameFormControl"
                            [errorStateMatcher]="matcher">
                   <!--  <mat-error *ngIf="(!nameFormControl.hasError('required')) || enablenameerror">
                       Please enter a valid name
@@ -34,7 +34,7 @@
                     </mat-error>
                 </mat-form-field>
                 <mat-card-actions align="end">
-                  <button class='loginbtn' mat-raised-button color="primary" (click)="submitform()">Login</button>
+                  <button class='loginbtn' [disabled]="nameFormControl.invalid || emailFormControl.invalid ||passwordFormControl.invalid" mat-raised-button color="primary" (click)="submitform()">Login</button>
                 </mat-card-actions>
       
     </mat-card-content>

@@ -42,7 +42,7 @@ export class AppComponent {
 
   @ViewChild('sidenav', {static: false}) sidenav: ElementRef;
   //form data
-  pageTitle:any='home';
+  pageTitle:any='Map';
   showNav:boolean = true;
   events: string[] = [];
   opened: boolean=true;
@@ -63,10 +63,16 @@ export class AppComponent {
       this.showNav = false;
     else
       this.showNav = true;
-     /* let index=this.menulist.findIndex(function(item){ return item.router == event.url});
+      let loggedin = localStorage.getItem('currentUser');
+      if(!loggedin)
+      {
+        this.router.navigate(['/login']);
+        return false;
+      }
+      let index=this.menulist.findIndex(function(item){ return item.router == event.url});
       if(index && index >=0)
         this.pageTitle = this.menulist[index].title;
-      else
+      /* else
         this.router.navigate(['/map']); */
         //this.pageTitle = '';
   });

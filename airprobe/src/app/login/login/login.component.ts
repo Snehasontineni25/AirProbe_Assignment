@@ -3,6 +3,7 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 import {FormControl, FormGroupDirective, NgForm, Validators, ReactiveFormsModule} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
 import {AuthserviceService} from '../../authservice.service';
+import { $ } from 'protractor';
 
 
 /** Error when invalid control is dirty, touched, or submitted. */
@@ -46,11 +47,9 @@ export class LoginComponent implements OnInit {
   
   submitform()
   {
-    console.log(this.enablenameerror);
-    if(this.nameFormControl.invalid)
+    if(!this.nameFormControl.value || this.nameFormControl.invalid)
     {
       this.enablenameerror=true;
-      console.log(this.enablenameerror);
       return false;
     }
     if(this.emailFormControl.invalid)
